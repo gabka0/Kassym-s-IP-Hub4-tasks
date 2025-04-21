@@ -1,0 +1,11 @@
+For my recent project, I tried to built a full-stack video platform similar to YouTube. It was one of my firsts full stack apps, so it was challenging using a lot of new tools. But constant research and modern AI technologies and videos helped me. 
+
+The application allows users to sign in, upload videos, browse a list of uploaded videos, and watch compressed versions.  The main goal was to build a scalable and modern video platform with proper authentication and backend processing.
+
+The tech stack included Next.js with TypeScript on the frontend. I used Firebase NoSQL and Google Cloud Pub/Sub. Videos are uploaded to Google Cloud Storage, and metadata is stored in Cloud Firestore. A custom video-processing service was built with Express.js, FFmpeg, and Docker, and deployed securely using Google Cloud Run.
+
+One of the biggest challenges was handling large video uploads and transcoding them in the background without blocking the main application. To solve this, I implemented an event-driven architecture using Pub/Sub, which triggers a separate service to transcode the uploaded video. This processing is done by the Dockerized FFmpeg backend, 
+
+which then saves the processed file back to Cloud Storage. I also needed to ensure that the processing service was secure and not publicly exposed, which was accomplished by running it in a private Cloud Run container. 
+
+Overall, the project helped me learn how to integrate cloud services and combine client-side and server-side logic effectively in a real-world app.
