@@ -1,0 +1,6 @@
+
+Server-side rendering (SSR) happens on the server before the page is sent to the client. It's useful for dynamic content, such as authenticated pages. 
+
+On the other hand, client-side rendering (CSR) takes place in the browser after the initial HTML is delivered. This approach is suitable for interactive components like user dashboards. 
+
+Both SSR and CSR can be combined in a Next.js app to optimize performance and user experience depending on the needs of each page. 
